@@ -1,0 +1,25 @@
+<div style="text-align: center;">
+    <mat-card>
+        <mat-card style="text-align: center; margin-top: 20px;">
+            <p>FOLHA DE PAGAMENTO</p>
+            <mat-form-field>
+                <mat-label for="funcionario">Funcionario</mat-label>
+                <mat-select name="funcionario" [(ngModel)]="funcionario">
+                    <mat-option
+                        *ngFor="let funcionario of funcionarios"
+                        value="{{ funcionario.id }}"
+                    >
+                        {{ funcionario.nome }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="example-full-width mgInput" appearance="fill">
+                <mat-label for="funcao">Cargo</mat-label>
+                <input matInput name="funcao" >
+            </mat-form-field><br><br>
+            <div>
+                <button (click)="createFolha()" mat-raised-button color="primary">Cadastrar</button>
+            </div>
+        </mat-card>
+    </mat-card>
+</div>
