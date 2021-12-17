@@ -1,7 +1,6 @@
 <div style="text-align: center;">
     <mat-card>
         <mat-card style="text-align: center; margin-top: 20px;">
-            <p>FOLHA DE PAGAMENTO</p>
             <mat-form-field>
                 <mat-label for="funcionario">Funcionario</mat-label>
                 <mat-select name="funcionario" [(ngModel)]="funcionario">
@@ -12,10 +11,22 @@
                         {{ funcionario.nome }}
                     </mat-option>
                 </mat-select>
-            </mat-form-field>
+            </mat-form-field><br>
             <mat-form-field class="example-full-width mgInput" appearance="fill">
-                <mat-label for="funcao">Cargo</mat-label>
-                <input matInput name="funcao" >
+                <mat-label for="horasTrabalhadas">Horas Trabalhadas</mat-label>
+                <input matInput type="number" name="horasTrabalhadas" [(ngModel)]="horasTrabalhadas">
+            </mat-form-field><br><br>
+            <mat-form-field class="example-full-width mgInput" appearance="fill">
+                <mat-label for="valorHora">Valor da hora</mat-label>
+                <input matInput type="number" name="valorHora" [(ngModel)]="valorHora">
+            </mat-form-field><br><br>
+            <mat-form-field class="example-full-width mgInput" appearance="fill">
+                <mat-label for="ano">Ano</mat-label>
+                <input matInput type="number" name="ano" [(ngModel)]="ano">
+            </mat-form-field><br><br>
+            <mat-form-field class="example-full-width mgInput" appearance="fill">
+                <mat-label for="mes">Mes</mat-label>
+                <input matInput type="number" name="mes" [(ngModel)]="mes">
             </mat-form-field><br><br>
             <div>
                 <button (click)="createFolha()" mat-raised-button color="primary">Cadastrar</button>
